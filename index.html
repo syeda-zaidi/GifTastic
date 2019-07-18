@@ -6,6 +6,8 @@
     <title> GifTastic Heroes </title>
 
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -14,17 +16,24 @@
 
 <body>
 
-    <div id="header"> 
+    <div class="jumbotron">
         <h1> Welcome to the AGE OF HEROES </h1>
+
         <div id="form">
-            <form id="hero-input"> 
-            
-                        Enter a Superhero <br>
-                        <input type="text" name="user-input"><br>
-                        <input type="submit" value="Submit">
-                      </form>
+            <form id="hero-input">
+
+                <label for="input"> Enter a Superhero </label> <br>
+                <input id="input-box" type="text" name="user-input"><br>
+                <input id="submit-btn" class="btn btn-primary" type="submit" value="Submit">
+
             </form>
         </div>
+    </div>
+
+    <div class="container">
+        <div id="buttons"></div>
+
+        <div id="gif-images"></div>
     </div>
 </body>
 

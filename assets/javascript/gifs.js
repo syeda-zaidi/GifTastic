@@ -13,7 +13,12 @@ $(document).ready(function () {
             btns.attr("data-name", superheroes[i]);
             btns.text(superheroes[i]);
 
+            // if (btns.text("")) {
+            //     $("$buttons").append("");
+            // } else {
+
             $("#buttons").append(btns);
+            
         }
     };
 
@@ -49,14 +54,21 @@ $(document).ready(function () {
                 gifDiv.append(images);
 
                 $("#gif-images").prepend(gifDiv);
-
             }
         })
-    }
+    };
 
     $(document).on("click", ".heroBtns", getGifs);
 
+    $("#submit-btn").on("click", function(event) {
 
+        event.preventDefault();
+        var newbtn = $("#input-box").val().trim();
+
+        superheroes.push(newbtn);
+
+        createButtons();
+    });
 
 });
 

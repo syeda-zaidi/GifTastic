@@ -1,3 +1,22 @@
+body {
+    background-image: url("https://i.ytimg.com/vi/M6CLYXkfiWE/maxresdefault.jpg");
+    background-size: contain;
+
+}
+
+h2 {
+    color: white;
+    margin-top: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Geostar Fill', cursive; 
+    font-size: 46px;
+    
+}
+
 
 #submit-btn {
     margin-top: 10px;
@@ -5,6 +24,11 @@
 
 label {
     font-family: cursive;
+    color: white;
+}
+
+#submit-btn {
+    margin-bottom: 40px;
 }
 
 .heroBtns {
@@ -18,4 +42,8 @@ label {
     margin: 10px;
     border: 2px solid grey;
     padding: 10px;
+}
+
+p {
+    color: aliceblue;
 }

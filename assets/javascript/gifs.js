@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var superheroes = ["Batman", "Ironman", "WonderWoman", "Captain Marvel", "Black Panther", "Thor", "Magneto", "Flash", "Doctor Strange"];
+    var superheroes = ["Batman","spiderman", "Ironman", "WonderWoman", "Captain Marvel", "Black Panther", "Thor", "Flash", "Doctor Strange"];
     console.log(superheroes);
 
     function createButtons() {

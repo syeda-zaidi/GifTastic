@@ -33,10 +33,30 @@ $(document).ready(function () {
 
         }).then(function(response) {
 
-            console.log(response.data);
+            var results = response.data;
+            console.log(results);
+
+            for (var i=0 ; i < results.length; i++) {
+                var gifDiv = $("<div class=gifbox>");
+                
+                
+                var rating = $("<p>");
+                rating.text("Rating : " + results[i].rating);
+                gifDiv.prepend(rating);
+
+                var images = $("<img>");
+                images.attr("src", results[i].images.fixed_height.url);
+                gifDiv.append(images);
+
+                $("#gif-images").prepend(gifDiv);
+
+            }
         })
     }
 
     $(document).on("click", ".heroBtns", getGifs);
+
+
+
 });
 

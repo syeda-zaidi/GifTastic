@@ -1,7 +1,7 @@
 body {
     background-image: url("../images/purple-background.jpg");
     background-size: contain;
-
+    
 }
 
 h2 {
@@ -14,21 +14,16 @@ h1 {
     color: white;
     font-family: 'Geostar Fill', cursive; 
     font-size: 46px;
-    
 }
-
 
 #submit-btn {
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 label {
     font-family: cursive;
     color: white;
-}
-
-#submit-btn {
-    margin-bottom: 40px;
 }
 
 .heroBtns {

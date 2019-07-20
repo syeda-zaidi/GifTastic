@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var superheroes = ["Batman", "spiderman", "Ironman", "WonderWoman", "Captain Marvel", "Black Panther", "Thor","Aquaman", "Doctor Strange"];
+    var superheroes = ["WonderWoman", "Captain Marvel", "Catwoman", "Gamora", "Mystique", "Harley Quinn", "Valkyrie"];
     console.log(superheroes);
 
     function createButtons() {
@@ -45,6 +45,14 @@ $(document).ready(function () {
                 var rating = $("<p>");
                 rating.text("Rating : " + results[i].rating);
                 gifDiv.prepend(rating);
+
+                var fav = $("<button>");
+                fav.text("Favourite");
+                fav.addClass("btn btn-secondary");
+                fav.attr("data-color", "secondary")
+                fav.attr("id", "fav-btn");
+                rating.append(fav);
+
 
                 var images = $("<img>");
                 images.attr("src", results[i].images.fixed_height_still.url);
@@ -99,6 +107,19 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on("click", "#fav-btn", function () {
+
+        var favcolor = $(this).attr("data-color");
+        if (favcolor === "secondary") {
+            $(this).attr("class", "btn btn-success");
+            $(this).attr("data-color", "green");
+        } else if (favcolor === "green") {
+            $(this).attr("class", "btn btn-secondary");
+            $(this).attr("data-color", "secondary");
+        }
+    })
+
+    
 
 });
 

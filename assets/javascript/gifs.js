@@ -3,6 +3,7 @@ $(document).ready(function () {
     var superheroes = ["WonderWoman", "Captain Marvel", "Catwoman", "Gamora", "Mystique", "Harley Quinn", "Valkyrie"];
     console.log(superheroes);
 
+    //creates buttons for each item in superheroes array 
     function createButtons() {
 
         $("#buttons").empty();
@@ -20,6 +21,7 @@ $(document).ready(function () {
 
     createButtons();
 
+    //sends ajax query, dynamically creates divs to hold the gif images and rating 
     function getGifs() {
 
         var hero = $(this).attr("data-name");
@@ -70,12 +72,13 @@ $(document).ready(function () {
 
     $(document).on("click", ".heroBtns", getGifs);
 
+    //creates btn with user input 
     $("#submit-btn").on("click", function (event) {
 
         event.preventDefault();
         var newbtn = $("#input-box").val().trim();
 
-        var isempty = $("#input-box").val() === "";
+        var isempty = $("#input-box").val() === ""; //prevents creating a button without input 
         if (!isempty) {
             superheroes.push(newbtn);
 
@@ -84,6 +87,7 @@ $(document).ready(function () {
 
     });
 
+    //animates the gif when mouse hovers on it 
     $(document).on("mouseenter", ".gifs", function () {
 
         var state = $(this).attr("data-state");
@@ -96,6 +100,7 @@ $(document).ready(function () {
         }
     });
 
+    //stills the gif when mouse moves out 
     $(document).on("mouseleave", ".gifs", function () {
 
         var state = $(this).attr("data-state");
@@ -107,6 +112,7 @@ $(document).ready(function () {
         }
     });
 
+    //click event to change fav btns when clicked 
     $(document).on("click", "#fav-btn", function () {
 
         var favcolor = $(this).attr("data-color");
@@ -119,7 +125,6 @@ $(document).ready(function () {
         }
     })
 
-    
 
 });
 

@@ -26,7 +26,7 @@ $(document).ready(function () {
 
         var hero = $(this).attr("data-name");
         var key = "pLOyNzu4brVNGfC6NtuWfBvRqvXZAV69";
-        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + giphykey + "&q=" + hero + "&limit=10&offset=0";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + hero + "&limit=10&offset=0";
 
         console.log(hero);
 
